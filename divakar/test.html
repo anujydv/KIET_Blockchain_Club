@@ -12,12 +12,13 @@
 	var john={
 		name:'john',
 		bills:[78,45,213,123,400],
-		calBill:function(){
+		calcTips:function(){
+			this.tip=[];
+			this.finalvalue=[];
 			for(var i=0;i<bills.length;i++){
-				this.tip=[];
-				this.finalvalue=[];
-				bill=bills[i];
-				var prencenge;
+				
+				var bill=this.bills[i];
+				var percentage;
 				if(i<50){
 					percentage=.2;
 
@@ -34,7 +35,7 @@
 		}
 	};
 
-	this.tip=this.calbill;
+	john.calcTips();
 	console.log(john);
 </script>
 </html>
