@@ -1,0 +1,87 @@
+<!doctype>
+<html>
+<head>
+    <title>java script </title>
+    </head>
+    <body>
+    <h1>JAVA SCRIPT</h1>
+    </body>
+    <script>
+    //object 1
+    var john={
+        name:'john',
+        bills:[45,57,89,123,456],
+        calcTips:function(){
+            this.tip=[];
+            this.finalvalue=[];
+            for(var i=0;i<this.bills.length;i++){
+                var bill=this.bills[i];
+                var percen;
+                if(bill<50){
+                    precen=.2;
+                }
+                else if(bill>=50&&bill<200){
+                    precen=.15;
+                }
+                else{
+                    precen=.1;
+                }
+                this.tip[i]=bill*precen;
+                this.finalvalue[i]=bill+bill*precen;
+            }
+        }
+    }
+    
+    //object 2
+    var mark={
+        name:'mark',
+        bills:[356,34,67,567],
+        calcTips:function(){
+            this.tip=[];
+            this.finalvalue=[];
+            for(var i=0;i<this.bills.length;i++){
+                var bill=this.bills[i];
+                var percen;
+                if(bill<50){
+                    precen=.15;
+                }
+                else if(bill>=50 &&bill<200){
+                    precen=.2;
+                }
+                else{
+                    precen=.25;
+                }
+                this.tip[i]=bill*precen;
+                this.finalvalue[i]=bill+bill*precen;
+            }
+        }
+    }
+   // mark.calcTips();
+       // console.log(mark);
+    
+    // calling function for average
+    function calAverage(tip){
+        var sum=0;
+        for(var i=0;i< tip.length;i++){
+            sum=sum+tip[i];
+        }
+        return sum/tip.length;
+    }
+        
+    john.calcTips();
+    mark.calcTips();    
+    
+    john.average=calAverage(john.tip);
+    mark.average=calAverage(mark.tip);
+        console.log(john,mark);
+    
+       // checking condition
+        if(john.average>mark.average){
+            console.log("john family paid height tips");
+        }
+        else{
+            console.log("mark family paid height tips");
+        }
+        
+    </script>
+</html>
