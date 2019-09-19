@@ -1,0 +1,152 @@
+<!doctype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script</title>
+</head>
+<body>
+<h1>basic java script</h1>
+</body>
+<script type="text/javascript">
+	//variable and data type
+	var name='john';
+	var age =21;
+	console.log(name);
+	console.log(age);
+	console.log(typeof name);
+	console.log(typeof age);
+
+	//variable  coercion
+	var firstName='divakar';
+	var lastName='verma';
+	console.log('your name is: '+firstName +' '+lastName);
+	//variable mutation 
+	var x,y,z;
+	x=2;
+	y=5;
+	z=x+y;
+	console.log(z);
+	//basic operator and precendence+ - * / % etc
+	var x,y,z,a,b,c;
+	x=3;
+	y=4;
+	z=12;
+	a=5;
+	b=(x+y)*z-a;
+	console.log(b);
+
+	// if else statement and boolean logic
+	function calculateAge(year){
+		return 2019-year;
+	}
+    var johnAge=calculateAge(1998);
+    var markAge=calculateAge(1994);
+    var marryAge=calculateAge(2000);
+    if(johnAge>markAge&& johnAge>marryAge){
+    	console.log("john age greater among three :" +johnAge);
+
+    }
+    else if(markAge>johnAge&&markAge>marryAge){
+    	console.log("mark age greater among three :" +markAge);
+
+    }
+    else{
+    	console.log("marry age greater among three :" +marryAge);
+    }
+
+    //the ternary operator
+    /*
+    var age=prompt("enter the age");
+    age >18?console.log("you are eligible for voting "):console.log("you are not eligible for voting");
+
+     // switch statement
+     var name=prompt("enter your name");
+     var job=prompt("what do you do ?");
+     switch(job){
+     	case 'engineer':
+     	   console.log(name+' is an '+job);
+     	break;
+     	case 'doctor':
+     	   console.log(name+' is a '+doctor);
+     	break;
+        case 'teacher':
+           console.log(name+' ia a '+teacher);
+        break;
+     	default:
+     	    console.log(name+' do something');
+     
+     }*/
+     // == and ===
+     var johnAge=21;
+     var markAge='21';
+     if(johnAge==markAge){
+     	console.log("yes");
+     }
+     else{
+     	console.log("no");
+     }
+
+     if(johnAge===markAge){
+     	console.log("yes");
+     }
+     else{
+     	console.log("no");
+     }
+
+     // function
+     // function definition
+     function markAverage(n1,n2,n3,n4,n5){
+     	return (n1+n2+n3+n4+n5)/5;
+     }
+     console.log(markAverage(60,60,56,43,50));
+     console.log(markAverage(56,34,56,43,50));
+     console.log(markAverage(42,58,56,43,50));
+     console.log(markAverage(60,34,56,45,50));
+
+     // function expresion 
+     var calAge=function(year){ 
+     	return 2019-year;
+      
+     }
+     console.log(calAge(1998));
+
+     // array 
+     var name=['john','mark',23,'marry','tom'];
+     console.log(name);
+     var john =new Array('john',21,'student');
+     console.log(john);
+     //array operation
+     john.push('bob');
+     console.log(john);
+     john.unshift('Mr');
+     console.log(john);
+     john.pop();
+     console.log(john);
+     john.shift()
+     console.log(john);
+
+     // object
+     var john={
+     	name:"john",
+     	familyMember:['tom','marry','mark'],
+     	birthYear:1998,
+     	calculateAge:function(){
+     		this.age=2019-this.birthYear;
+     	}
+
+     }
+     john.calculateAge();
+     console.log(john);
+
+     // loop
+    var name=['tom','marry','mark'];
+    for(var i=0;i<name.length;i++){
+    	console.log(name);
+    }
+
+     
+
+
+
+</script>
+</html>
