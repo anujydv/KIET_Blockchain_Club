@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>First JS</title>
+</head>
+<body>
+	
+	<script>
+		<!-- Addition-->
+		function getSum(){
+		var a=Number(document.getElementById("fnum").value);
+		var b=Number(document.getElementById("snum").value);
+		document.write(a+b);}
+		
+		<!-- Subtraction-->
+		function getDiff(){
+		var c=Number(document.getElementById("fnum").value);
+		var d=Number(document.getElementById("snum").value);
+		document.write(c-d);
+		}
+		
+	
+	</script>
+		<input type="number" id="fnum" placeholder="First Number">
+		<input type="number" id="snum" placeholder="Second Number"><br><br><br>
+		<button onclick="getSum()">+</button>
+		<button onclick="getDiff()">-</button>
+
+
+
+
+
+</body>
+</html>
