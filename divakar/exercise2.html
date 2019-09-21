@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	
+	var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+	console.log(sampleStr);
+	var stringVar="I am \"double queted\". a string \"double queted\".";
+	console.log(stringVar);
+	console.log("firstLine\n\t \\secondLine\n thridLine");
+	// concating string += operator
+	stringVar="This is first sentence";
+	stringVar+="This is second sentence";
+	console.log(stringVar);
+	//appending variable to string
+	anAdjective="awesome";
+	ourString="freeCOde camp is";
+	myString="learing to a code";
+	console.log(ourString+' '+anAdjective+' '+myString);
+
+	var myStr='jellow word';
+	myStr[0]='H';
+	//console.log(myStr);
+	myStr='Hellow Word';
+	console.log(myStr);
+
+	// word blanks
+	/*
+	function wordBlanks(myNoun,myAdjective,myVerb,myAdverb){
+		return myNoun+' is a '+myAdjective+' It '+myVerb+' '+ myAdverb;
+	}
+	//document.alert("Welcome to word blanks");
+	var myNoun=prompt("Enter a noun");
+	var myAdjective=prompt("Enter a Adjective");
+	var myVerb=prompt("Enter verb");
+	var myAdverb=prompt("enter Adverb");
+	console.log(wordBlanks(myNoun, myAdjective, myVerb, myAdverb));
+*/
+	// multidimentional array
+	
+	var bioData=[['john',21,90.1],['mark',13,89.4],['marry',19,91.3]];
+	console.log(bioData);
+
+	var myArray=['john',21,'smith'];
+	myArray[0]='mark';
+	myArray[2]='mittel';
+	console.log(myArray);
+	// accessing multidimensional array using index
+	var arr=[
+      ['12',23,45],
+      [34,8,89],
+      [[3,5,7],4,13],
+      [12,43,2]
+	];
+	// find 8
+	console.log(arr[1][1]);
+	// find 7
+	console.log(arr[2][0][2]);
+
+	// two dimentional array operation
+	var bioData=[['john',21,90.1],['mark',13,89.4],['marry',19,91.3]];
+	bioData.push(['bob',34,67.7]);
+	console.log(bioData);
+	bioData.pop();
+	console.log(bioData);
+	bioData.unshift(['tom',56,89.9]);
+	console.log(bioData);
+	bioData.shift();
+	console.log(bioData);
+	// shoping list
+	var shopingList=[
+     ['Shirt',4],
+     ['pant',5],
+     ['Laptop',1],
+     ['Mobile Vivo',1],
+     ['Book',45]
+	];
+
+	console.log(shopingList);
+
+	// function
+	function functionWithArgs(a,b){
+		console.log(a + b);
+	}
+	functionWithArgs(5,10);
+  // global variable-->declare with out var keyword
+
+  
+  function fun1(){
+  	 a=12;
+     b=18;
+  	console.log(a -b);
+  }
+  fun1();
+
+function fun2(){
+  	
+  	console.log(a +b);
+  }
+  fun2();
+
+  function fun3(){
+  	
+  	console.log(a *b);
+  }
+  fun3();
+
+  //local variable
+  function myFun(){
+  	var name='john';
+  	console.log(name);
+  }
+  myFun();
+  console.log(name);
+  // precedence -----> local variable>global variable
+
+  var name='john';// global variable
+  function fun(){
+  	var name='mark'; // local variable
+  	return name;
+  }
+  console.log(fun());
+
+  //
+  var sum=0;
+  function addSum(){
+  	 sum+=5;
+  }
+  var add=addSum();
+  console.log(add); // undefined
+///********//
+  function endToFirst(arr){
+  	
+  	for(var i=1;i<5;i++){
+        arr.push(i);
+        return arr.pop();
+  	}
+  }
+  var testArray=[];
+  //var num=6;
+  console.log("original array "+JSON.stringify(testArray));
+  console.log(endToFirst(testArray));
+  console.log("after push:"+JSON.stringify(testArray));
+  console.log("pop element:"+endToFirst(testArray));
+
+  // boolean variable
+  function booleanVar(){
+  	return 2>4;
+  }
+  console.log(booleanVar());
+
+  //!= operator
+  function testNotEqual(val) {
+  if (val!=99) { 
+    return "Not Equal";
+  }
+  return "Equal";
+}
+testNotEqual(10);
+// strict notequility (!==) operator
+function strictNotEqulity(val){
+	if(val!==12){
+		return "Not Equal";
+	}
+	return "Equal";
+}
+console.log(strictNotEqulity(10));
+// nested if statement
+function nestedIfStatement(num1,num2,num3){
+	if(num1>num2){
+		if(num1>num3){
+			return "greater number is:"+num1;
+		}
+		else{
+			return "greater number is:"+num3;
+		}
+	}
+	if(num2>num3){
+		return "greater number is:"+num2;
+	}
+	else{
+		return "greater number is:"+num3;
+	}
+}
+console.log(nestedIfStatement(23,56,2));
+/***********golf code******/
+/* condition
+Strokes	           Return
+1	               "Hole-in-one!"
+<= par - 2	       "Eagle"
+par - 1	           "Birdie"
+par	               "Par"
+par + 1	           "Bogey"
+par + 2	           "Double Bogey"
+>= par + 3	       "Go Home!"
+*/
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+  if (strokes == 1){
+    return names[0];
+  }
+  else if (strokes <= par-2){
+    return names[1];
+  }
+  else if (strokes == par -1){
+    return names[2];
+  }
+  else if (strokes == par){
+    return names[3];
+  }
+  else if (strokes == par +1){
+    return names[4];
+  }
+  else if (strokes == par +2){
+    return names[5];
+  }
+  else {
+  	return names[6];
+  }
+}
+
+console.log(golfScore(5, 4));
+
+
+
+</script>
+</html>
