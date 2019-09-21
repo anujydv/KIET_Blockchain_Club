@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<script>
+	function fibo(){
+	var i;
+	var a=Number(prompt("Enter first number:"));
+	var b=Number(prompt("Enter second number"));
+	var n=Number(prompt("Enter number of terms:"));
+	document.write(a+"<br>"+b+"<br>");
+	for(i=a; i<=n; i++)
+		{
+		var nextt;
+		nextt=a+b;
+		a=b;
+		b=nextt;
+		document.write(nextt+"<br>");
+		}
+	}
+	</script>
+</head>
+<body>
+	<button onclick="fibo()"/>Fibo
+		
+		
+</body>
+</html>
