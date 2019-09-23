@@ -1,0 +1,116 @@
+<!doctype>
+<html>
+<head>
+    <title>java script</title>
+    </head>
+    <body>
+    <h1>java script</h1>
+    </body>
+    <script>
+    
+        function abTest(a,b){
+            if(a<0 ||b<0){
+                return ;
+            } 
+        }
+        console.log(abTest(-3,4));
+        
+        var count = 0;
+// counting cards game
+        /*
+        Count Change	        Cards
+        +1	                    2, 3, 4, 5, 6
+         0	                            7, 8, 9
+        -1	                           10, 'J', 'Q', 'K', 'A'*/
+var count=0;
+function cc(card){
+    switch(card){
+    case 1: case 2: case 3: case 4: case 5: case 6:
+    count+=1;
+    break;
+    case 7: case 8: case 9:
+    count+=0;
+    break;
+    case 10: case 'A': case 'J': case 'Q': case 'K':
+    count-=1;
+    }
+    if(count>0){
+        return count+" Bet";
+    }
+    else{
+        return count+" Hold";
+    }
+}
+        console.log(cc(2)); 
+        console.log(cc(2)); 
+        console.log(cc('A'));  
+        console.log(cc(7)); 
+        
+/********/
+var testObj={
+    propName:'John',
+    4:'year'
+};        
+function test(str){
+    var s='prop';
+    return s+str;
+}
+
+        var someName=test("Name");
+        console.log(testObj[someName]);
+/*******/
+        var dog={
+            name:"Hahhy Codder",
+            legs:4,
+            tails:1,
+            friends:['everyone']
+        };
+        console.log(dog);
+        delete dog.tails;
+        console.log(dog);
+        
+        /******* hasOwnProperty()*/
+       /* The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).*/
+var john={
+    name:'john',
+    age:21,
+    married:'single',
+   
+};
+        function checkProp(prop){
+            if(john.hasOwnProperty(prop)==true){
+                console.log(john[prop]);
+            }
+            else{
+                console.log('Not found');
+            }
+        }
+        checkProp('name');
+        
+        //*********Find random number//
+        var randomNumber=Math.floor(Math.random()*20);
+        console.log(randomNumber);
+        // random number in given range
+        function findRandomNumber(max,min){
+            var num=Math.floor(Math.random()*(max-min+1))+min;
+            return num;
+        }
+        console.log(findRandomNumber(5,2));
+        
+        //****** parseInt function----> convert string into integer
+        var num=parseInt('123');
+        console.log(num);
+        
+        // parseInt function with Radix *////
+        var a=parseInt('1010',2);
+        console.log(a);
+        var b=parseInt('john',2);
+        console.log(b);
+        
+        
+    </script>
+</html>
+
+
+
+
