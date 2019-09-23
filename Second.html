@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+function gn ()
+{
+const vowel = ['a','e','i','o'];
+console.log(vowel);
+vowel.push('s');
+console.log(vowel);
+vowel.unshift('u');
+console.log(vowel);
+vowel.pop();
+console.log(vowel.indexOf('a'));
+console.log(vowel);
+const person = {
+name : 'Akshat',
+hobbies : ['Music','Movie'],
+address : {
+street : 50,
+city : 'gzb'
+}
+}
+console.log(person.name);
+console.log(person.address.city);
+console.log(person.hobbies[0]);
+}
+</script>
+<body>
+<input type = "button" onclick="gn ()" value="Hello there">
+</body>
+</head>
+</html>
