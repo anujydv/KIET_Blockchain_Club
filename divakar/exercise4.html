@@ -1,0 +1,121 @@
+<!doctype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script</title>
+</head>
+<body>
+<h1>java script</h1>
+</body>
+<script type="text/javascript">
+	
+	// complex object
+	var myObj=[
+	{
+     "name":"john",
+     "age":21,
+     "music":['m1','m2','m3']
+	},
+	{
+		"name":"mark",
+		"age":21,
+		"music":["m1","m2"]	
+	}
+
+	];
+	console.log(myObj);
+
+	// nested object
+	var myStroge={
+		"stationary":{
+          "book":{
+          	"book1":"physics",
+          	"book2":"programming"
+
+          },
+          "pen":{
+          	"pen1":"cello",
+          	"pen2":"winXten"
+          }, 
+		},
+		"transport":{
+			'4':"car",
+			'2':"bike"
+		}
+	};
+
+	
+	myStroge.stationary.book['book1']="math";
+	console.log(myStroge.stationary.book['book1']);
+
+
+	// nested array
+	var myArray=[
+      {
+      	fruitsType:"summerSession",
+      	name:['mango','lichi']
+      },
+      {
+      	fruitsType:"winterSession",
+      	name:['apple','somertytuiu']
+      }
+	];
+	console.log(myArray[1].name[0]);
+
+	var book={
+          	book1:"physics",
+          	book2:"programming"
+
+          };
+          console.log(book);
+          book['book1']="math";
+          console.log(book);
+          book['book3']="chemistry";
+          console.log(book);
+
+          //******** Librerary *******///
+          
+          var book={
+          	"123":{
+          		"CSE":['COA',"DS",'DMLT'],
+          		"IT":['math'],
+          		"ECE":['DLT']
+          	},
+          	"134":{
+          		"EN":['COA',"DS",'DMLT'],
+          		"CE":['math'],
+          		"AS":['physics']
+          	},
+          	"234":{
+          		"ASI":""
+          	},
+          	"234":{
+
+          	}
+          };
+        // function to update value
+        function updateResult(id,prop,value){
+        	if(prop==="CSE"&& value!==""){
+        		if(book[id][prop]){
+        			book[id][prop].push(value);
+        		}
+        		else{
+        			book[id][prop]=[value];
+        		}
+        	}
+        	else if(value!==""){
+               book[id][prop]=value;
+        	}
+        	else{
+        		delete book[id][prop];
+        	}
+        	return book;
+        }
+        updateResult(123,"CSE","Math");
+        updateResult(123,"RT","tryu");
+        console.log(book);
+        
+       
+
+</script>
+</html>
