@@ -1,0 +1,122 @@
+<!doctypeaa>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script strng</title>
+	<style type="text/css">
+		#demo{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+<h1>java script</h1>
+<h2>JavaScript Array Methods</h2>
+
+<p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits[fruits.length] = "Kiwi";
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+<script type="text/javascript">
+	
+	//string function
+	/*
+     length()
+     indexOf()
+     lastIndexOf()
+     search()
+     slice()
+     substring()
+     substr()
+     toUpperCase()
+     toLowerCase()
+     replace()
+     charAt()
+     toCharAt()
+     split()
+
+	*/
+	var str="banana ,mango,apple";
+	
+	console.log(str.indexOf("mango"));
+	
+	console.log(str.lastIndexOf('a'));
+	console.log(str.search('n'));
+	console.log(str.slice(7,12));
+	console.log(str.slice(7));
+	console.log(str.substring(7));
+	console.log(str.substr(5));
+	console.log(str.toUpperCase());
+	console.log(str.replace('banana','lichi'));
+	console.log(str.charAt(3));
+	console.log(str.charCodeAt('m'));
+
+	var x='    hellow    ';
+	var y='    word!     ';
+	console.log(x.trim().concat(y.trim()));
+
+	var alfhabet='ab,c,d,e,f,g';
+	console.log(alfhabet.split(","));
+	
+	/// array
+	var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "";
+for (i = 0; i < fLen; i++) {
+  text += "" + fruits[i] + "\n";
+}
+
+console.log(text);
+
+var fruits, txt, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.forEach(myFunction);
+	text="";
+
+
+function myFunction(value){
+	txt+=value+"\n";
+}
+console.log(txt);
+console.log(typeof fruits);
+console.log(Array.isArray(txt));
+console.log(Array.isArray(fruits));
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.unshift("lomon"));
+
+
+</script>
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
