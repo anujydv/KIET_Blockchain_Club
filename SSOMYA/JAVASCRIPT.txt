@@ -1,0 +1,90 @@
+Babel ES6 - for colour correction of words for easier debugging.
+First save file on VSCode and then run on CMD.
+
+open console on chrome - ctrl+shift+J
+scrimba.com to run js code
+
+comments are ignored by js , / inline comment /.
+/*.......*/ - multi line comment
+
+7 data types - undefined - variable not defined.
+               null -  variable value is null.
+               boolean - true/false
+               string - series of character,in double quotes or single quotes
+               symbol - immutable primitive value that is unique.
+               number
+               object - store diff. key value pairs.
+
+var *name* = *set value to any of the data types above*
+can change value/data type anywhere 
+
+let *name* = *value*
+
+const pi = 3.14 - cant change value now
+
+you can skip semi colons , but its recommended.
+
+a=7;
+console.log(a); - shows value of a in console
+
+var c= "hello";
+c=c+"world"; - shows combined output
+
+variables are case sensitive
+
+a+=9 --> a=a+9
+
+put '\'(escape sequences) before " to not identify it as a end of string but only a character OR you can start your string with single quote.
+
+back ticks (`) can also be used to define a string and hence both " and ' can be used.
+
+var str= "hello"+"louis";
+
+var str="may";
+console.log("my name is"+str);
+
+*string name*.length() - gives the length in int
+
+separate characters of string - *str name*[i] , i=1 to length-1
+
+STRINGS ARE IMMUTABLE . CHARACTERS CANT BE CHNAGED SEPARATELY. type a whole new string.
+
+function *name*( variable arguments )
+{
+}
+call normally with *function name*()
+
+spaces - " "
+
+You can use any data type in your array var a=["john",23,43.87] 
+
+arrays are mutable.
+
+*array name*.push( *element* ) - add element in array AT THE END. (SS)
+
+*array name*.push() - remove last element in the array.
+
+*array name*.shift() - remove first element in the array.
+*array name*.unshift( *element* ) - add at first place in the array.
+
+console.log(a-b); - direct operation
+
+outside func. variable has global scope
+
+if inside a function , you dont put "var" before a variable name then it would AUTOMATICALLY BECOME GLOBAL VARIABLE(not possible in scrimba), else remain local only.
+OR you can declare it outside any function using var.
+
+when there is local and global variable with the same name , then LOCAL variable TAKES HIGHER PRIORITY.
+
+in Queue , items are kept in order. new items added at the back (right side) and old items removed from front (left side).
+
+JSON.stringify(*array name*) - print array as a string
+
+no qoutation marks around boolean true & false.
+
+strict equality operator ( === ) doesnt chnage the data type ( 3 === 3 - TRUE ) ( 3 === '3' - FALSE)
+with == both would have been TRUE
+
+strict inequality operator - !== no type conversions
+
+if , else if , else
