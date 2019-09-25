@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="Utf-8">
+<title>javascript codes</title>
+<!-- <script src="code.js"></script> -->
+<body>
+<script>
+alert("hello");
+var a=6; //initialize and assignment 
+var b=7;            //global variable
+document.write(a);  //to procude output in window
+a++; //increment
+b--;//decrement
+document.write(a);
+a+=3;  //a=a+3
+var string="I love \"polar bear.\"";  
+document.write(string);
+var s=string.length; //for finding string length
+document.write(s);
+document.write(string[4]);
+function name( firstname,lastname)             //function declaration
+{    globalvar=5;                      //global variable defined inside function because not given var data type inside function
+  var localvar=10;                        //local variable
+    result="";
+    result="My namme is"+firstname+" "+secondname;
+    return result;
+
+}
+
+function boolean()
+{
+    return false;
+}
+document.write(boolean());
+var x=name("vini","maheshwari");                   //function call
+document.write(name("vini","maheshwari"));
+var arr=[10,20,30];
+arr.push(25);      //insrt element at the last
+document.write(arr);
+arr.pop();      //last element of array get removed
+document.write(arr);
+arr.shift();       //remove 1st element of array
+arr.unshift("30");   //insert in 1st position of array
+if(a==10){                        //only checks value not type
+    document.write ("equal");
+}
+else{
+    document.write ("notequal");
+}
+function switchuse(){
+var age=prompt("whats your age group?");
+var text;
+switch(age){
+    case 10: text="childhood";
+    break;
+    case 20: text="young";
+    break;
+    case 30: text="mature";
+    break;
+    case 40: text="parent";
+    break;
+    case 50: text="more responsible";
+    break;
+    case 60: text="old age";
+    break;
+    default: text="wrong choice"
+    break;
+}
+document.write(text);
+}
+//.......................object............//
+var anystudent={
+    "name":"seema",       //property :value    
+    "roll":60,
+    "dept":"CSE"
+    "shirt size":30
+};
+var sname=anystudent.name;
+var ssize=anystudent["shirt size"];     //if property name is given in sace form
+anystudent.stream="Science"        //adding one more property to the object
+delete anystudent.dept;            //for deleting any property
+//use of object to replace switch case
+function lookroll(val){
+    var resul="";
+var roll{
+    1:"aman",
+    2:"daman",
+    3:"gagan",
+    4:"sagan",
+    5:"tapan",
+};
+result= roll[val];
+return result;
+}
+document.write(lookroll(2));
+var randomNumber=Math.floor(Math.random()*10);
+        document.write(randomNumber);
+        // random number in given range
+        function findRandomNumber(max,min){
+            var num=Math.floor(Math.random()*(max-min+1))+min;
+            return num;
+        }
+        console.log(findRandomNumber(10,5));
+        
+
+
+
+
+
+
+
+</script>
+</body>
+</head>
+</html>
