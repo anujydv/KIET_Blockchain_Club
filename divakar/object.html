@@ -1,0 +1,82 @@
+<!doctype>
+<html>
+<head>
+    <title>java script</title>
+    </head>
+    <body>
+    <h1>java script advanced object and function</h1>
+    </body>
+    <script>
+        /*
+    var john={
+        firstName:'john',
+        yearOfBirth:1998,
+        job:'teacher'
+        
+    };
+        
+        var mark={
+        firstName:'mark',
+        yearOfBirth:1988,
+        job:'engireer'
+        
+    };
+        
+        var marry={
+        firstName:'marry',
+        yearOfBirth:1999,
+        job:'deginer'
+        
+    };
+        console.log(john);
+        console.log(mark);
+        console.log(marry);
+     */   
+// function contructer
+        
+    var Person=function(name,DOB,job){
+        this.name=name;
+        this.DOB=DOB;
+        this.job=job;
+        /*
+        this.calculateAge=function(){
+           console.log(2019-this.DOB);
+           */
+        
+            
+    } ;
+        
+    Person.prototype.calculateAge=function() {
+        console.log(2019-this.DOB);
+    }   
+        
+        var john=new Person('john',1998,'teacher');
+        var mark=new Person('mark',1988,'engineer');
+        var marry=new Person('marry',1999,'deginer');
+        
+        john.calculateAge();
+        mark.calculateAge();
+        marry.calculateAge();
+        
+         
+        
+        
+    
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
