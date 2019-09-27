@@ -1,0 +1,93 @@
+var mObject={
+    name:"vini",
+    sirname:"maheshwari"
+}
+function checkObj(checkProp)
+{
+    if(mObject.hasOwnProperty(checkProp))
+    {
+        return mObject[checkProp]
+    }
+    else{
+        return "not found"
+    }
+}
+document.write(checkObj("name"));
+}
+
+//..................manipulation of complex objects....................//
+ var arr=[
+ {
+     "pet":"dog",
+     "color":"brown",
+     "born":2000,
+     "child":[
+     "ena","meena",dica"],
+     "girlfriend":true
+ },
+ {
+    "pet":"cat",
+    "color":"black",
+    "born":2001,
+    "child":[
+    "enai","meenai",dicai"],
+    "girlfriend":true
+     
+ }
+ ];
+
+ //....................accessing nested object...............................//
+var family={
+    "grandfather":{
+        "father":{
+            "son":"raghav"}
+        "mother":{
+            "daughter":"rama"
+        }
+    }
+        };
+        var famstruct=family.father["son"];
+        document.write(famstruct);
+
+ //..........................accessing nested array.......................//
+ var familyy=[grand[gfather[paternal,maternal],gmother[paternal,maternal]]]  
+ var nesarr=family[0].gfather[1] ;
+ 
+ //......................Record collection..................//
+ var collection={
+ "112":{
+     "fruit":"mango",
+     "vegie":"tomato",
+     "snack":["chips","drink"],
+ }
+ "113":{
+    "fruit":"apple",
+    "vegie":"potato",
+    "snack":["chipss","driink"],
+}
+"114":{
+    "fruit:"banana",
+    "snack":[]
+}
+"115":{
+    "vegie":"ginger"
+}
+
+
+ };
+function updateRecords(id,prop,value)
+{
+if(value==""){
+    delete collection[id][prop];
+} else if(prop==="'snack")
+{
+    collection[id][prop]=collection[id][prop]||[];
+    collection[id][prop].push(value);
+}
+else{
+    collection[id][prop]=value;
+}
+return collection;
+}
+document.write(updateRecords(222,"tomato","sauce"));
+
