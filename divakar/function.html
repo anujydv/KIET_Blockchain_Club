@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>java script</title>
+    
+    <body>
+    <h1>function</h1>
+    </body>
+    <script>
+    
+    var years=[1998,1967,1988,1999,2008];
+        
+        function arrCal(arr,fn){
+            var arrRes=[];
+            for(var i=0;i<arr.length;i++){
+                arrRes.push(fn(arr[i]));
+            }
+            return arrRes;
+        }
+        
+        function calAge(el){
+            return 2019-el;
+        }
+        function isFullAge(el){
+            return el>=18;
+        }
+        
+        function maxHeartRate(el){
+            if(el>=18 &&el<=81){
+            return Math.round(206.9-(0.67*el));
+            }
+            else{
+                return -1;
+            }
+        }
+       
+      var ages= arrCal(years,calAge);
+        console.log(ages);
+        var fullAge=arrCal(years,isFullAge);
+        console.log(fullAge);
+        var heartRate=arrCal(years,maxHeartRate);
+        console.log(heartRate);
+    </script>
+    </head>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
