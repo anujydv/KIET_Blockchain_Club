@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>java script array</title>
+    <style>
+        #demo{
+            color:orangered;
+        }
+    </style>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+    var fruits=['Mango','Orange','Banana','Apple','Leche'];
+        fruits.sort();// sort alfhabetcaly
+        console.log(fruits);
+       var fru= fruits.sort(function(a,b){return a-b;});// sort numericaly
+        console.log(fru);
+        
+        //
+        var points=[1,45,67,2,6,8];
+        points.sort();// sort alphabetcaly
+        console.log(points);
+        points.sort(function(a,b){return a-b;});// sort numeracly
+        console.log(points);
+        console.log(points)
+        
+    ///////////////////
+    // function: function passing as a argument
+        var years=[1998,1988,1978,1976,2008];
+        function arrCal(arr,fn){
+            var arrRes=[];
+            for(var i=0;i<arr.length;i++){
+                arrRes.push(fn(arr[i]));
+            }
+            return arrRes;
+        }
+        
+        function calAge(el){
+            return 2019-el;
+        }
+        
+        function fullAge(el){
+            return el>=18;
+        }
+       /* 
+        function heartRate(el){
+            if(el>=18&&el<=81){
+                return Math.round(206.9-(.6*el));
+            }
+            else{
+                return -1;
+            }
+        }
+        */
+        var ages=arrCal(years,calAge);
+        var fullAges=arrCal(years,fullAge);
+      //  var heartsRate=arrCal(years,heartRate);
+        console.log('ages are:'+ages);
+        console.log(fullAges);
+      //  console.log(heartsRate);
+        
+        
+        
+        /////////////////////////
+        // function:function returning a argument
+function interveiwQuestion(job){
+    return function(name){
+        if(job==='teacher'){
+            console.log(' What do you teach? '+name);
+        }
+        else if(job==='designer'){
+            console.log("Do you know UX design "+name);
+        }
+        else{
+            console.log(name+" Do something");
+        }
+    }
+}  
+        
+        var teacherInterveiwQues=interveiwQuestion('teacher');
+        teacherInterveiwQues('john');
+        teacherInterveiwQues('mark');
+        teacherInterveiwQues('marry');
+        // another way
+        interveiwQuestion('designer')('john');
+        
+        
+    </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
