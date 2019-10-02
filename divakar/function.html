@@ -1,63 +1,149 @@
+<!doctype>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>java script</title>
-    
-    <body>
-    <h1>function</h1>
-    </body>
-    <script>
-    
-    var years=[1998,1967,1988,1999,2008];
-        
-        function arrCal(arr,fn){
-            var arrRes=[];
-            for(var i=0;i<arr.length;i++){
-                arrRes.push(fn(arr[i]));
-            }
-            return arrRes;
-        }
-        
-        function calAge(el){
-            return 2019-el;
-        }
-        function isFullAge(el){
-            return el>=18;
-        }
-        
-        function maxHeartRate(el){
-            if(el>=18 &&el<=81){
-            return Math.round(206.9-(0.67*el));
-            }
-            else{
-                return -1;
-            }
-        }
-       
-      var ages= arrCal(years,calAge);
-        console.log(ages);
-        var fullAge=arrCal(years,isFullAge);
-        console.log(fullAge);
-        var heartRate=arrCal(years,maxHeartRate);
-        console.log(heartRate);
-    </script>
-    </head>
+	<title>java</title>
+</head>
+<body>
+<h1>java script</h1>
+</body>
+<script type="text/javascript">
+	// function constructer
+	/*
+var Person=	function(name,job,DOB){
+         this.name=name;
+         this.job=job;
+         this.DOB=DOB;
+	}
+	Person.prototype.calculateAge=function(){
+		console.log(2019-this.DOB);
+	}
+	var john=new Person('john','teacher',1998);
+	var mark=new Person('mark','engineer',1995);
+	var marry=new Person('marry','desiginer',2000);
+	console.log(john);
+	console.log(mark);
+	console.log(marry);
+	john.calculateAge();
+	mark.calculateAge();
+	marry.calculateAge();
+	*/
+
+	//////////////////
+	//function as a argument
+	/*
+	var years=[1998,2012,1989,1978,1979];
+	function personDetail(arr,fn){
+		var arrRes=[];
+		for(var i=0;i<arr.length;i++){
+			arrRes.push(fn(arr[i]));
+		}
+		return arrRes;
+	}
+
+	function calAge(el){
+		console.log(2019-el);
+	}
+	function maxAge(el){
+     return 2019-el>18;
+	}
+/*
+	function voterDetail(el){
+		
+		if(el>18){
+			console.log("you are elligible for voting");
+		}
+		else{
+			console.log("you are not elligible for voting")
+		}
+	}
+	
+	var ages=personDetail(years,calAge);
+	//var vote=personDetail(years,voterDetail);
+	var maxAges=personDetail(years,maxAge);
+	console.log(maxAges);
+
+/////////////////////////////
+// function : function returning a function
+function myFun(job){
+	if(job==='teacher'){
+		return function(name){
+			console.log('What subject you teach ? '+name);
+		}
+	}
+		else if(job==='engineer'){
+			return function(name){
+				console.log('What programming language you know ? '+name);
+			}
+		}
+			else{
+				return function(name){
+					console.log(name+' do something ');
+				}
+			
+		}
+	
+}
+
+  var teacherQues=myFun('teacher');
+  teacherQues('john');
+   myFun('engineer')('mark');
+
+   //IIFE
+   (function calScore(score){
+   	if(score>99){
+   		console.log('you win');
+   	}
+   	else{
+   		console.log('You loss!')
+   	}
+   })(5);
+
+   ///////////////////
+   // closer:
+   function interVeiw(job){
+   	return function(name){
+   		if(job==='teacher'){
+   			console.log('What subject you teach '+name+'?');
+   		}
+   		else if(job==='desiginer'){
+   			console.log('Do you know UX design ?'+name);
+   		}
+   		else {
+   			console.log('do something');
+   		}
+   	}
+
+   }
+
+   var teacherInterVeiw=interVeiw('teacher');
+   teacherInterVeiw('mark');
+   */
+///
+// Bind Call Apply
+var john={
+	name:'john',
+	job:'teacher',
+	age:1998,
+	
+	presentation:function(style,timeOfDay){
+		if(style==='formel'){
+			console.log('good '+timeOfDay+', ladies and gentelmen I\'m '+this.name+' I\'m a '+this.job+'I\'m '+this.age+'years old');
+		}
+		else if(style==='friendly'){
+			console.log('hey! What\'s up I a\'m '+this.name+' I\'m a'+this.job+' I\'m '+this.age+' yeras old Have a nice '+timeOfDay+',');
+		}
+	}
+
+ 
+};
+
+	john.presentation('formal','morning');
+	
+
+
+
+
+</script>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
