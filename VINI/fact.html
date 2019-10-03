@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>javascript restro</title>
+</head>
+<body>
+<script language="javascript">
+//Use of funtion 
+function fact( a)
+{
+if(a==0 || a==1)
+{
+return 1;
+}
+else
+{
+return a=a*fact(a-1);
+}
+}
+var p=window.prompt("enter a no.","integer")
+var c=fact(p);
+document.write("factorial is"+c);
+//............string function
+function gender(name)
+{var x;
+if(name==="sita" ||name==="gita")
+{
+x="girl";
+}
+else{
+x= "boy";
+}
+return x;
+}
+window.alert("Enter any one of them: Ram , Gita ,Sita ,lakhan")
+var naam=window.prompt("name","")
+document.write(naam+" is a "+gender(naam));
+
+</script>
+
+</body>
+</html>
