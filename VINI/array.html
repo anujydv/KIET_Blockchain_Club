@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>javascript array</title>
+</head>
+<body>
+<script language="javascript">
+var myArray=[];
+var i=0;
+while(i<5)
+{
+myArray.push(i);
+i++;
+}
+document.write(myArray);
+document.write("<br>");
+//................for printing odd no using for loop.......................
+var odd=[];
+var j;
+for(j=1;j<10;j+=2)
+{
+odd.push(j);   //.push is used to insert value
+}
+document.write("odd no. are: "+odd);
+document.write("<br>");
+var a=[1,2,3,4,5];
+var total=0;
+var i=0;
+while(i<a.length)
+{
+total+=a[i];
+i++;}
+document.write("total is: "+total);
+document.write("<br>");
+//..........generates fractional random no..........
+function RandomNo()
+{
+return Math.random();
+}
+document.write(RandomNo());
+document.write("<br>");
+//...........integer random no.....................
+function RandomN()
+{
+return Math.floor(Math.random()*10); //10 is multiplied for generating intteger between 1 to 9
+}
+document.write(RandomN());
+document.write("<br>");  
+//..................generating random no. between a range.....
+function randomRange(min,max)
+{
+return Math.floor(Math.random()*(max-min+1))+min;
+}
+var random=randomRange(5,15);
+document.write(random);
+document.write("<br>");  
+//............terniary operator................
+function check(num)
+{
+return num>0 ? "positive": num<0 ?"negative" :"zero"
+}
+document.write(check(0));
+document.write("<br>");  
+
+
+
+
+
+
+
+
+
+
+</script>
+</body></html>
