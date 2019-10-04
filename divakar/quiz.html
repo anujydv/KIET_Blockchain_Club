@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>java script</title>
+    </head>
+    <body>
+    <h1>java script array</h1>
+    </body>
+    <script>
+    //Bind Call Apply
+        /*
+        var john ={
+            name:'john',
+            job:'teacher',
+            age:21,
+            presantation:function(style,time){
+                if(style==='formal'){
+                    console.log('Good '+time+' Ladies and gentalmen I \'m  '+this.name+' I \'m a '+this.job+' I \'m a '+this.age+' old');
+               
+                }
+                else if(style==='friendly'){
+                    console.log('Hey! what up? I\'m a  '+this.name+' I\'m a '+this.job+' Have a nice '+time);
+                }
+                else{
+                    console.log('Error');
+                }
+            }
+        }
+        
+        var mark={
+            name:'mark',
+            job:'engineer',
+            age:23
+        };
+    john.presantation('friendly','morning');
+    john.presantation.call(mark,'formal','evening');
+     */
+        ////////////////
+        // quiz game
+        /*
+        function quizGame(question,ans,correct){
+            this.question=question;
+            this.ans=ans;
+            this.correct=correct;
+        }
+        
+        var q1=new quizGame('The capital of India is:',['Lucknow','Delhi'.'Kanpur','None'],1);
+        var q2=new quizGame('Prime minister of India ',['Narindra Modi ','Manmohan Sighn')
+        */
+        var questionQuiz=function(question,answer,correct){
+            this.question=question;
+            this.answer=answer;
+            this.correct=correct;
+        }
+        
+        questionQuiz.prototype.displayQuestion=function() {
+            console.log(this.question);
+            for(var i=0;i<this.answer.length;i++){
+                console.log(i+' : '+this.answer[i]);
+            }
+            
+        }
+        
+        questionQuiz.prototype.checkAnswer=function(answer){
+            if(answer===this.correct){
+                console.log("correct answer");
+            }
+            else{
+                console.log("wrong answer");
+            }
+        }
+        
+        var q1=new questionQuiz('Inside which HTML element do we put the JavaScript?',['<script>','<scripting>','<javascriot>','<js>'],0);
+        var q2=new questionQuiz('Where is the correct place to insert a JavaScript?',['The <body>section','Both <body> and <head> section','The <head> section'],1);
+        var q3=new questionQuiz('The external JavaScript file must contain the <script> tag.',['False','True'],0);
+        var questions=[q1,q2,q3];
+        
+        function nextQuestion() {
+        var n = Math.floor(Math.random() * questions.length);
+        questions[n].displayQuestion();
+        var answer = prompt('Please select the correct answer.');
+        if(answer !== 'exit') {
+            questions[n].checkAnswer(parseInt(answer));
+            
+            nextQuestion();
+        }
+    }
+    
+    nextQuestion();
+        
+              
+        
+      
+        nextQuestion();
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
