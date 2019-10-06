@@ -1,0 +1,241 @@
+<!dictype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java</title>
+</head>
+<body>
+
+</body>
+<script>
+	/*
+	function main1(input){
+       var a=input;
+       if(a%2!=0){
+       	var a=input+1;
+       	console.log(a);
+
+       }
+       console.log(a);
+	}
+  function myFun1(input){
+  	let a=input;
+  	if(a%2!=0){
+  		let a=input+1;
+  		console.log(a);
+  	}
+  	console.log(a);
+  }
+
+  function myFun2(input){
+  	const a=input;
+  	//const b;
+  	console.log(a);
+  }
+  main1(11);
+  myFun1(11);
+  myFun2(11);
+
+  const PI=Math.PI;
+  console.log(PI);
+
+  for(var i='a';i<'z';i++){
+     console.log(i);
+  }
+
+  /////////////////
+  /*
+  function myString(s){
+  	var arr1=['a','e','i','o','u'];
+  	for(var i=0;i<arr1.length;i++){
+  		if(s===arr1[i]){
+  			console.log('A');
+  		}
+  		
+  	}
+
+  		
+  }
+  
+
+  function getString(s){
+  	var letter;
+  	switch(true){
+  		case 'aeiou'.includes(s[0]):
+  		letter='A';
+  		break;
+  		case 'bcdfg'.includes(s[0]):
+  		letter='B';
+  		break;
+  		case 'hiklm'.includes(s[0]):
+  		letter='C';
+  		break;
+  		case 'npqrstvwxyz'.includes(s[0]):
+  		letter="D";
+
+  		default:
+  		console.log('n');
+  	}
+  	console.log(letter);
+  }
+  
+
+  getString('dtjiuu');
+  
+
+  var str='hellow word';
+  var a=str.charAt(0);
+  console.log(a);
+
+  function myString(s){
+  	var letter;
+  	switch(true){
+  		case 'aeiou':s.chatAt(0);
+  		console.log('string is starting with vowel');
+  		break;
+  		default:
+  		console.log("string is not starting with vowel")
+  	}
+  }
+  myString('aeiou');
+
+  function getLetter(s) {
+    let letter;
+    // Write your code here
+    switch(true){
+        case 'aeiou'.includes(s[0]):
+        letter="A";
+        break;
+        case 'bcdfg'.includes(s[0]):
+        letter="B";
+        break;
+        case 'hjklm'.includes(s[0]):
+        letter ='C';
+        break;
+        case 'npqrstvwxyz'.includes(s[0]):
+        letter='D';
+        break;
+        default:
+        letter='Nan';
+    }
+
+    
+    
+    return letter;
+}
+console.log(getLetter('adfgt'));
+
+
+ function myString(s){
+ 	//var arr1=['a','e','i','o','u'];
+ 	    var letter;
+ 		switch(true){
+ 			
+ 			case 'a','e','i','o','u'===s.charAt(0):
+ 			console.log("A");
+ 			break;
+ 			
+ 			case 'b','c','d','f','g'===s.charAt(0):
+ 			console.log("B");
+ 			break;
+ 			case 'h','j','k','l','m'===s.charAt(0):
+ 			console.log("C");
+ 			break;
+ 			case 'n','p','r','s','t','v','w','x','y','z'===s.charAt(0):
+ 			console.log("D");
+ 			break;
+ 			
+ 			default:
+ 			console.log("Something");
+ 			
+ 		}
+ 		
+ }
+
+  myString('attp');
+
+  
+  var arr=[];
+  var s='divakar';
+  for(var i=0;i<s.length;i++){
+  	arr.push(s[i]);
+  }
+  console.log(arr);
+*/
+
+//////////***************////////
+/*
+  function vowelConsonent(s){
+  	var arr1=[];
+  	var arr2=[];
+  	for(var i=0;i<s.length;i++){
+  		if(s[i]==='a'||s[i]==='e'||s[i]==='i'||s[i]==='o'||s[i]==='u'){
+  			arr1.push(s[i]);
+  			
+  		}
+  		else {
+  			arr2.push(s[i]);
+  			
+  		}
+  	}
+  	for(var i=0;i<arr1.length;i++){
+  		console.log(arr1[i]+"\n");
+  	}
+  	for(var i=0;i<arr2.length;i++){
+  			console.log(arr2[i]+"\n");
+
+  	}
+  
+  	
+  }
+  vowelConsonent('javascript');
+*/
+ // find second largest number 
+ var arr=[2,3,6,6,5];
+ var first,second;
+ if(arr[0]>arr[1]){
+ 	first=arr[0];
+ 	second=arr[1];
+ }
+ else{
+ 	first=arr[1];
+ 	second=arr[0];
+ }
+ for(var i=2;i<arr.length;i++){
+ 	if(first<arr[i]){
+ 		second=first;
+ 		first=arr[i];
+
+ 	}
+ 	else if(second<arr[i]&&arr[i]<first){
+ 		
+ 		second=arr[i];
+ 		
+ 	}
+ }
+ console.log(first);
+ console.log(second);
+
+ /////reverse a string
+
+ function reverseString1(s){
+ 	var rev=s.split("").reverse().join("");
+ 	console.log(rev);
+ }
+ reverseString1('1234');
+
+ function reverseString2(s){
+ 	var arr=[];
+ 	for(var i=s.length-1;i>=0;i--){
+ 		arr.push(s[i]);
+ 	}
+ 	   var str=arr.join("");
+       console.log(str);
+ 	
+ }
+ reverseString2('divakar');
+ 
+ 
+</script>
+
+</html>
