@@ -1,0 +1,152 @@
+<!doctype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script</title>
+</head>
+<body>
+<h1>java script </h1>
+</body>
+<script type="text/javascript">
+	/*
+	var d = new Date();
+    var year = d.getFullYear();
+    console.log(year);
+     ///
+    var fruits = ["Apple", "Banana", "Orange"];
+     for (x in fruits){
+       console.log(fruits[x]);
+      }
+
+      var y="5";
+      var x=+y;
+      console.log(x);
+      var a=typeof x;
+      console.log(a);
+      console.log(typeof y);
+
+      var myVar = {name:"Fjohn"};
+      console.log(myVar.toString());  
+      var  myVar = [1,2,3,4];       
+      var myVar = new Date();  
+      var x=5^1;
+      console.log(x);
+      // converting decimal to binary
+      function decToBin(dec){
+      	return (dec>>>0).toString(2);
+      }
+      console.log(decToBin(10));
+// converting binary to decimal
+     function binToDec(bin){
+     	return parseInt(bin,2).toString(10);
+     }
+     console.log(binToDec(1010));
+
+     ///////////
+     function reverseString(s){
+     	try{
+     		return s.split("").reverse().join("");
+     	}
+     	catch(err){
+     		return err.message;
+
+     	}
+     }
+     console.log(reverseString(1234));
+
+     var x='5';
+     try{
+     	console.log(typeOf(x));
+     }
+     catch(err){
+     	console.log(err.message);
+     }
+     */
+
+     //////////
+     // arrow function
+     /*
+     var age
+     age=()=>{
+     	console.log("Introduction of arrow function ")
+     }
+   age();
+ 
+    calculateAge=(age)=>{
+   	return 2019-age;
+
+   }
+   console.log(calculateAge(1998));
+   */
+//
+  var fruits = ["Apple", "Orange", "Apple", "Mango"];
+  var a = fruits.lastIndexOf("Apple");
+  console.log(a);
+
+  var person={
+  	firstName:'john',
+    lastName:'Doe',
+    language:'No',
+    age:21
+  };
+  Object.defineProperty(person,'language',{value:'EN',});
+  Object.defineProperty(person,'age',{value:22});
+  var x;
+  var text="";
+  for(x in person){
+  	text+=person[x];
+  }
+  console.log(text+" ");
+
+  const z=(x,y)=>x*y;
+  console.log(z(5,6));
+
+     // class
+  
+  
+////function constructer 
+function Person(name,age,mark){
+	this.name=name;
+	this.age=age;
+	this.mark=mark;
+}
+  var john=new Person('john',22,23.7);
+  console.log(john);
+  var mark=new Person('mark',21,45.6);
+  console.log(mark);
+
+      // class
+
+     class Car{
+     	constructor(brand,price){
+     	
+          this.carName=brand;
+          this.Price=price;
+     	}
+     	person(){
+     		return "I have "+this.carName;
+     	}
+
+     }
+
+     car1=new Car("BMW",23);
+     car2=new Car("Jagwar",56);
+     console.log(car1,car2);
+     console.log(car1.person());
+     console.log(typeof constructor);
+     // JSON.stringify
+
+     /////
+     var numbers=[4,9,16,25,29];
+     var first=numbers.find(myFun);
+     console.log(first);
+     function myFun(val){
+     	return val>18;
+     }
+/*
+     var text='{'employee':[{'firstName':'john','lastName':'smith'},{'firstName':'mark','lastName':'deo'}]}';
+     var a=JSON.parse(text);
+     console.log(a);
+     */
+</script>
+</html>
