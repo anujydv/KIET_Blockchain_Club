@@ -1,0 +1,156 @@
+<!doctype>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form</title>
+  
+<style>
+  #demo{
+    color:red;
+  }
+
+</style>
+</head>
+<body>
+  <script>
+    /*
+    function myFun(){
+      var x,text;
+      x=document.getElementById('numb').value;
+      if(isNaN(x)||x<1||x>10){
+        text="Input is not valid";
+      }
+      else{
+        text="Input OK";
+      }
+      document.getElementById('demo').innerHTML=text;
+    }
+    
+    function add(){
+      var x,y,sum;
+      x=document.getElementById('numb1').value;
+      y=document.getElementById('numb2').value;
+      sum=parseInt(x)+parseInt(y);
+      document.getElementById('demo').innerHTML=sum;
+    }
+    function sub(){
+      var x,y,sum;
+      x=document.getElementById('numb1').value;
+      y=document.getElementById('numb2').value;
+      sum=parseInt(x)-parseInt(y);
+      document.getElementById('demo').innerHTML=sum;
+    }
+    
+
+    function myFun(){
+      var x ;
+      x=document.getElementById('id1').value;
+      if(!x.checkValidity()){
+        x.validationMessage;
+      }
+      else{
+        document.getElementById('demo').innerHTML="OK Input";
+      }
+    }
+    */
+    var person ={
+      firstName:"John",
+      lastName:"Doe",
+      age:21,
+      eyeColor:"Blue"
+    };
+    //var x=person;
+    //console.log(x);
+   // console.log(x.age);
+    //console.log(x['age']);
+    person.name=function(){
+      return this.firstName+" "+this.lastName;
+    }
+    console.log("My Brother is "+person.name());
+
+    // getter and seter method
+    /*
+    var person ={
+      firstName:"John",
+      lastName:"Doe",
+     // age:21,
+     DOB:1998,
+     eyeColor:"Blue",
+     calculateAge:function(){
+        return this.age=2019-this.DOB;
+      }
+    };
+
+    person.calculateAge();
+    console.log(person);
+*/
+    // getter method
+    var person ={
+      firstName:"John",
+      lastName:"Doe",
+     // age:21,
+     DOB:1998,
+     eyeColor:"Blue",
+     //language:"English"
+     get calculateAge(){
+        return 2019-this.DOB;
+     }
+   };
+   console.log(person.calculateAge);
+
+   // setter method
+   var person ={
+      firstName:"John",
+      lastName:"Doe",
+      age:"",
+     eyeColor:"Blue",
+     
+     set dob(dob){
+       this.age= 2019-dob;
+     }
+   };
+   person.dob=1998;
+  console.log(person.age);
+
+  function isPositive(a) {
+    try{
+      if(a>0){
+        return "YES";
+      }
+      else if(a==0){
+        throw "Zero Error";
+      }
+      else{
+        throw "Negative Error";
+      }
+    }
+    catch(er){
+      return er;
+    }
+}
+console.log(isPositive(-1));
+
+var person =function(a,b){
+  this.length=a;
+  this.width=b;
+  this.calPer=function(){
+    return 2*(this.length+this.width);
+
+  }
+}
+
+var p=new person(4,5);
+p.calPer();
+console.log(p);
+  </script>
+
+  <p id='demo'></p>
+ <!-- <input type="text" id="numb1">
+  <input type="text" id="numb2">
+  <button onclick="add()">Add</button>
+  <button onclick="sub()">sub</button>
+-->
+<input type="number" id="id1" max="300" min="100" name="">
+<button onclick ="myFun()">Submit</button>
+</body>
+</html>
