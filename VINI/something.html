@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>kuch to kro</title>
+<script type="text/javascript">
+/*
+// ...............table........................
+var x=window.prompt("enter number whose table you want to print");
+x=parseInt(x);
+for(var i=1;i<=10;i++)
+{
+document.write(x*i);
+document.write("<br>");
+}
+
+//...........reverse of string..................
+
+var x=window.prompt("what's your name");
+var i=x.length;
+i=i-1;
+for(var j=i;j>=0;j--)
+{
+document.write(x.charAt(j));
+}
+
+//..........second largest no..................
+var a=[4,5,2,7,1];
+var max=a[0];
+var j=2;
+while(j>0)
+{
+for(var i=0;i<a.length-1;i++)
+{
+if(a[i]>a[i+1])
+{
+var c=a[i];
+a[i]=a[i+1];
+a[i+1]=c;
+}
+}
+}
+document.write("second largest value is : "+(a.length-2));
+//...........nested for loop.............
+var sum=sumAll([[1,2],[3,4],[5,6,7]);
+document.write(sum);
+document.write("<br>");
+function sumAll(arr)
+{
+var sum=1;
+for(var i=0;i<arr.length;i++)
+{
+for(var j=0;j<arr[i].length;j++)    
+{
+sum+=arr[i][j]
+}
+}
+return sum;
+}
+*/
+//.................voting eligibility....................
+/* var x=window.prompt("enter your age");
+x=parseInt(x);
+if(x>=18)
+{
+window.alert("you are eligible to vote")
+
+}
+else
+{
+window.alert("you are not eligible to vote")
+}
+//..............onclick attribute use........................................
+function myclick()
+{
+document.getElementById("para").innerHTML="ram ram";
+document.getElementById("demo").innerHTML="Time is :  "+Date();
+}
+*/
+ //.................... arrow function........................................
+  /*   
+     var age
+     age=()=>{
+     	document.write("Introduction of arrow function ")
+     }
+   age();
+ 
+    calculateAge=(age)=>{
+   	return 2019-age;
+   }
+   document.write(calculateAge(1998));
+   */
+   
+   //.......................getting type of variables...............................
+   var y="10";
+      var x=+y;
+      document.write(x);
+      var a=typeof x;
+      document.write(a);
+      document.write(typeof y);
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<p id="para"> hiiiiiiiiiiiiiiii</p>
+<button type="button"  onclick="myclick()">Hindi version</button>
+<p id="demo"></p>
+
+</body>
+<html>
+
