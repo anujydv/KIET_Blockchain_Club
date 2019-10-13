@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>calci</title>
+<script language="javascript">
+function addition(){
+var a=parseInt(window.prompt("enter 1st number :"));
+var b=parseInt(window.prompt("enter 2nd number :"));
+var c=a+b;
+document.write("Sum is : "+c);
+}
+
+function substraction(){
+var a=parseInt(window.prompt("enter 1st number :"));
+var b=parseInt(window.prompt("enter 2nd number :"));
+var c=a-b;
+document.write("Difference is : "+c);
+}
+
+function multiply(){
+var a=parseInt(window.prompt("enter 1st number :"));
+var b=parseInt(window.prompt("enter 2nd number :"));
+var c=a*b;
+document.write(Multiplication is : "+c);
+}
+function Divide(){
+var a=parseInt(window.prompt("enter 1st number :"));
+var b=parseInt(window.prompt("enter 2nd number :"));
+if(b!=0)
+{
+var c=a/b;
+document.write(Division is : "+c);
+}
+else
+{
+document.write("undefined value");
+}
+}
+</script>
+</head>
+<body>
+<p>Which operation you want to perform 
+<br>
+<Br>
+<button type="button"  onclick="addition()">Addition</button>
+<button type="button"  onclick="substraction()">Substraction</button>
+<button type="button"  onclick="multiply()">Multiplication</button>
+<button type="button"  onclick="Divide()">Division</button>
+</body>
+</html>
+
+
+
