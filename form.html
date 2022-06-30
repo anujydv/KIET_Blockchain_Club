@@ -2,7 +2,12 @@
 <html> 
 <head>  
 <title>Form</title> 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>
+  body{
+    background-color: black;
+    color: white;
+  }
 fieldset{ margin: 2%;}
 input[type=text], select {
   width: 100%;
@@ -33,12 +38,19 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+#head{
+  font-size: 60px;
+}
+#sameAdd{
+  margin-left: 30px;
+}
 </style>
 </head> 
 
 <body> 
-<h1> Form</h1>	 
-<form > 
+<center> <h1 id="head"><b>Block chain Club Form</h1>  </b>   </center>	 
+<form  data-aos="flip-down"
+data-aos-duration="3000"> 
 <fieldset >			 
 <legend>Primary Details</legend>	 
 <label for ="primaryname">Name:</label>		 
@@ -64,10 +76,12 @@ input[type=submit]:hover {
 <label for = "secondaryzip">Zip code:</label>		 
 <input type = "text" name = "Zip code" id = "secondaryzip" pattern = "[0-9]{6}" required><br/> 
 </fieldset> 
-<input type = "submit" value = "Submit"/> 
+<div >
+<center> <input type = "submit" value = "Submit"/> </center>
+</div>
 </form> 
 
-// JavaScript Code 
+ <!-- JavaScript Code  -->
 <script> 
 function addressFunction() 
 { 
@@ -86,6 +100,11 @@ else
 	document.getElementById('secondaryzip').value=""; 
 } 
 } 
+  
 </script> 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body> 
 </html> 
